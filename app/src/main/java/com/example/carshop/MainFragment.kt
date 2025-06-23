@@ -11,8 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainFragment : Fragment() {
 
-    private val CarService = CarService()
-    private var adapter = CarAdapter(CarService.cars)
+    private val adapter = CarAdapter(CarService.cars)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,8 +24,7 @@ class MainFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
-        var recyclerView: RecyclerView = view.findViewById(R.id.recyclerViewCarShop)
+        val recyclerView: RecyclerView = view.findViewById(R.id.recyclerViewCarShop)
 
         val layoutManager = LinearLayoutManager(requireContext())
         recyclerView.layoutManager = layoutManager
