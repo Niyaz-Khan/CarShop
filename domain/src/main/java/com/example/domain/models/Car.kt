@@ -1,6 +1,6 @@
-package com.example.carshop
+package com.example.domain.models
 
-data class Car (
+class Car (
     val carName: String, // название машины
     val carDescription: String, // текст о машине
     val carPrice: String, // цена
