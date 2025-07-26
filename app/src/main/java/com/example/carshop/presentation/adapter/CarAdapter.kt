@@ -10,9 +10,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.carshop.R
 import com.example.carshop.presentation.adapter.CarDiffCallBack
+import com.example.carshop.presentation.viewModel.CarUIModel
 import com.example.domain.models.Car
 
-class CarAdapter() : ListAdapter<Car, CarAdapter.CarViewHolder>(CarDiffCallBack()) {
+class CarAdapter() : ListAdapter<CarUIModel, CarAdapter.CarViewHolder>(CarDiffCallBack()) {
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -38,7 +39,7 @@ class CarAdapter() : ListAdapter<Car, CarAdapter.CarViewHolder>(CarDiffCallBack(
         private val carPhoto: ImageView = itemView.findViewById(R.id.imageCar)
         private val carDescription: TextView = itemView.findViewById(R.id.carDescriptionTextView)
 
-        fun bind(car: Car) =
+        fun bind(car: CarUIModel) =
             with(itemView) {  // Принимает Car и заполняет данными имя,цена,объяснения
                 carName.text = car.carName
                 carPrice.text = car.carPrice
